@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Игра на категории</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Главная страница -->
+    <div id="main-screen">
+        <h1>Игра на категории</h1>
+        <button id="start-button">Начать игру</button>
+        <button id="help-button">?</button>
+    </div>
+
+    <!-- Экран с выбором категорий -->
+    <div id="category-screen" class="hidden">
+        <h2>Выберите категории</h2>
+        <div id="categories"></div>
+        <button id="shuffle-categories">Перемешать все</button>
+        <button id="continue-button">Продолжить</button>
+    </div>
+
+    <!-- Экран с выбором буквы -->
+    <div id="letter-screen" class="hidden">
+        <h2>Выберите букву</h2>
+        <div id="letter-wheel"></div>
+        <button id="shuffle-letter">Перемешать все</button>
+        <button id="start-game-button">Начать игру</button>
+    </div>
+
+    <!-- Экран с игрой -->
+    <div id="game-screen" class="hidden">
+        <h2>Введите ответы</h2>
+        <div id="answer-fields"></div>
+        <div id="timer">60</div>
+        <button id="check-answers-button">Проверить ответы</button>
+    </div>
+
+    <!-- Экран с результатами -->
+    <div id="results-screen" class="hidden">
+        <h2>Результаты</h2>
+        <div id="results"></div>
+        <button id="show-possible-answers">Показать возможные ответы</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
