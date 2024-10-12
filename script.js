@@ -69,24 +69,40 @@ const categories = [
     "דברים רומנטיים",
     "דברים הקשורים לחתונה"
 ];
-
-const letters = "אבגדהוזחטיכלמנסעפצקרשת".split("");
-
-document.getElementById("start-game").addEventListener("click", startGame);
-
-function startGame() {
-    const chosenCategories = getRandomCategories(5);
-    const chosenLetter = getRandomLetter();
-
-    document.getElementById("categories-container").innerHTML = <h3>קטגוריות:</h3> ${chosenCategories.join(", ")};
-    document.getElementById("letter-container").innerHTML = <h3>אות:</h3> ${chosenLetter};
+// Функция для выбора случайных категорий
+function getRandomCategories() {
+    let randomCategories = [];
+    while (randomCategories.length < 5) {
+        const randomIndex = Math.floor(Math.random() * categories.length);
+        const randomCategory = categories[randomIndex];
+        if (!randomCategories.includes(randomCategory)) {
+            randomCategories.push(randomCategory);
+        }
+    }
+    return randomCategories;
 }
 
-function getRandomCategories(num) {
-    const shuffled = categories.sort(() => 0.5 - Math.random());
-    return shuffled.slice(0, num);
-}
-
+// Функция для выбора случайной буквы
 function getRandomLetter() {
-    return letters[Math.floor(Math.random() * letters.length)];
+    const letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ';
+    const randomIndex = Math.floor(Math.random() * letters.length);
+    return letters[randomIndex];
+}
+
+// Функция для начала игры
+function startGame() {
+    // Очистка предыдущего результата
+    document.getElementById('category-list').innerHTML = '';
+    
+    // Получаем случайные категории
+    const randomCategories = getRandomCategories();
+    randomCategories.forEach(category => {
+        const li = document.createElement('li');
+        li.textContent = category;
+        document.getElementById('category-list').appendChild(li);
+    });
+
+    // Получаем случайную букву
+    const randomLetter = getRandomLetter();
+    document.getElementById('random-letter').textContent = randomLetter;
 }
