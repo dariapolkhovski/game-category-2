@@ -1,34 +1,21 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f0f0f0;
+    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
 }
 
 .hidden {
     display: none;
 }
 
-button {
-    padding: 10px 20px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-#timer {
-    font-size: 24px;
-    margin: 20px 0;
-}
-
-.correct {
-    color: green;
-}
-
-.incorrect {
-    color: red;
-}
-
-.typomistake {
-    color: yellow;
+h1, h2, h3 {
+    color: #333;
 }
