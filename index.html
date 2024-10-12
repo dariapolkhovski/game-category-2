@@ -1,27 +1,26 @@
 <!DOCTYPE html>
-<html lang="he">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>משחק קטגוריות</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>משחק קטגוריות</h1>
-        <button id="start-game">התחל משחק</button>
-        <div id="categories-container"></div>
-        <div id="letter-container"></div>
-        <div id="answers-container">
-            <input type="text" placeholder="תשובה 1">
-            <input type="text" placeholder="תשובה 2">
-            <input type="text" placeholder="תשובה 3">
-            <input type="text" placeholder="תשובה 4">
-            <input type="text" placeholder="תשובה 5">
-        </div>
-        <button id="check-answers">בדוק תשובות</button>
-        <div id="result-container"></div>
+
+<div class="container">
+    <h1>משחק קטגוריות</h1>
+    <p>תלחץ על התחל משחק, לבחירת אות וקטגוריהה רנדומלית</p>
+    <button class="button" onclick="startGame()">התחל משחק</button>
+    
+    <div class="output">
+        <p><strong>קטגוריות:</strong></p>
+        <ul id="category-list"></ul>
+        <p><strong>Буква:</strong> <span id="random-letter"></span></p>
     </div>
-    <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
