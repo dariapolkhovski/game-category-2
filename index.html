@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="he">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Игра с категориями</title>
-    <link rel="stylesheet" href="style.css">
+    <title>משחק קטגוריות</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Игра с категориями</h1>
-        <button id="startGame">Начать игру</button>
-        <div id="categoriesContainer" class="hidden">
-            <h2>Выберите категории:</h2>
-            <div id="categories"></div>
-            <button id="shuffleCategories">Перемешать категории</button>
-            <h2 id="chosenLetter"></h2>
-            <div id="answersContainer" class="hidden">
-                <h3>Ваши ответы:</h3>
-                <div id="answers"></div>
-                <button id="checkAnswers">Проверить ответы</button>
-            </div>
+    <div class="game-container">
+        <h1>משחק קטגוריות</h1>
+        <button id="start-game">התחל משחק</button>
+        <div id="categories-container"></div>
+        <div id="letter-container"></div>
+        <div id="answers-container">
+            <input type="text" placeholder="תשובה 1">
+            <input type="text" placeholder="תשובה 2">
+            <input type="text" placeholder="תשובה 3">
+            <input type="text" placeholder="תשובה 4">
+            <input type="text" placeholder="תשובה 5">
         </div>
+        <button id="check-answers">בדוק תשובות</button>
+        <div id="result-container"></div>
     </div>
     <script src="script.js"></script>
 </body>
