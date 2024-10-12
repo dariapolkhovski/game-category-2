@@ -1,3 +1,4 @@
+// Список категорий
 const categories = [
     "משקאות",
     "מאכלים פופולריים",
@@ -84,7 +85,7 @@ function getRandomCategories() {
 
 // Функция для выбора случайной буквы
 function getRandomLetter() {
-    const letters = 'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЭЮЯ';
+    const letters = 'אבגדהוזחטיכלמנסעפצקרשת';
     const randomIndex = Math.floor(Math.random() * letters.length);
     return letters[randomIndex];
 }
