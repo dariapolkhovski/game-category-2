@@ -1,22 +1,35 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
     text-align: center;
-    direction: rtl;
 }
 
-.game-container {
-    margin-top: 50px;
-}
-
-button {
-    margin: 10px;
+.button {
+    margin: 20px;
     padding: 10px 20px;
     font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
-input {
-    display: block;
-    margin: 10px auto;
-    padding: 8px;
-    width: 200px;
+.output {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
 }
